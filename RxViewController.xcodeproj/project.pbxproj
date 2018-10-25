@@ -10,6 +10,8 @@
 		096BDD792181FBE200A017F5 /* RxViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 096BDD772181FBE200A017F5 /* RxViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		096BDD7D2181FBEE00A017F5 /* NSViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096BDD682181F4D000A017F5 /* NSViewController+Rx.swift */; };
 		096BDD7E2181FBEE00A017F5 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096BDD692181F4D000A017F5 /* UIViewController+Rx.swift */; };
+		096BDD8A2182182800A017F5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096BDD872182182800A017F5 /* RxSwift.framework */; };
+		096BDD8B2182182800A017F5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096BDD882182182800A017F5 /* RxCocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,9 @@
 		096BDD752181FBE200A017F5 /* RxViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		096BDD772181FBE200A017F5 /* RxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxViewController.h; sourceTree = "<group>"; };
 		096BDD782181FBE200A017F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		096BDD872182182800A017F5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		096BDD882182182800A017F5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		096BDD892182182800A017F5 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096BDD8A2182182800A017F5 /* RxSwift.framework in Frameworks */,
+				096BDD8B2182182800A017F5 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +46,7 @@
 				096BDD5D2181F4AC00A017F5 /* RxViewController */,
 				096BDD762181FBE200A017F5 /* RxViewController */,
 				096BDD5C2181F4AC00A017F5 /* Products */,
+				096BDD862182182700A017F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +92,16 @@
 				096BDD782181FBE200A017F5 /* Info.plist */,
 			);
 			path = RxViewController;
+			sourceTree = "<group>";
+		};
+		096BDD862182182700A017F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				096BDD892182182800A017F5 /* RxBlocking.framework */,
+				096BDD882182182800A017F5 /* RxCocoa.framework */,
+				096BDD872182182800A017F5 /* RxSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +321,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxViewController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -330,6 +352,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxViewController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
